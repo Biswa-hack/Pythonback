@@ -1,2 +1,0 @@
-# Pythonback
-Python Bankend Automation
