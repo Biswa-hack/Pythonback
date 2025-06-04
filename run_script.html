@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Excel Merger</title>
+</head>
+<body>
+    <h2>Merge Excel Files</h2>
+    <button onclick="runScript()">Run Merger</button>
+    <p id="status"></p>
+
+    <script>
+        function runScript() {
+            fetch('/run-merger')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('status').innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById('status').innerText = 'Error: ' + error;
+                });
+        }
+    </script>
+</body>
+</html>
